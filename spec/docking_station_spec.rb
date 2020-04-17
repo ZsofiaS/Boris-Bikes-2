@@ -22,8 +22,20 @@ describe DockingStation do
   end
   #it { is_expected.to respond_to :bikes }
   describe "no bikes in docking station" do
+
     it "raises" do
       expect { subject.release_bike }.to raise_error("No bikes available")
     end
+
   end
+
+  describe "docking station is full" do
+
+    it "raises error" do
+      subject.dock_bike(Bike.new)
+      expect { subject.dock_bike Bike.new }.to raise_error("Docking station is full")
+    end
+
+  end
+
 end

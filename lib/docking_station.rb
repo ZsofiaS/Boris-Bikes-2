@@ -7,6 +7,14 @@ class DockingStation
     @bikes = []
   end
 
+  def dock_bike(bike)
+    if @bikes.count == 1
+      fail "Docking station is full"
+    else
+      @bikes << bike
+    end
+  end
+
   def release_bike
     if @bikes.empty?
       fail "No bikes available"
@@ -15,7 +23,4 @@ class DockingStation
     end
   end
 
-  def dock_bike(bike)
-    @bikes << bike
-  end
 end
