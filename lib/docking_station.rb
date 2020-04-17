@@ -8,7 +8,7 @@ class DockingStation
   end
 
   def dock_bike(bike)
-    if @bikes.count == 1
+    if @bikes.count >= 20
       fail "Docking station is full"
     else
       @bikes << bike
