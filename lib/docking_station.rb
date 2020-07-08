@@ -16,7 +16,7 @@ class DockingStation
     fail "No bikes available" if empty?
     @bikes.pop
   end
-
+ 
   private
 
   def full?

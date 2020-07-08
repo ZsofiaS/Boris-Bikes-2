@@ -16,7 +16,7 @@ describe DockingStation do
   it 'Return bike to docking station' do
     expect(subject).to respond_to(:dock_bike)
   end
-
+ 
   it "attr_reader" do
     expect(subject).to respond_to(:bikes)
   end
